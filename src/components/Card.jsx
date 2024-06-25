@@ -41,9 +41,9 @@ const Card = () => {
             <p>Population:-{info[0].population}</p>
             <p>Area:-{info[0].area
             }</p>
-            <p>Borders:{info[0].borders.map((border,index)=>{
+          {info[0].borders &&  <p>Borders:{info[0].borders.map((border,index)=>{
               return <p className='inline' key={index}>{ " "+border+" " }</p>
-            })}</p>
+            })}</p>}
    <p>languages:-{" "+Object.values(info[0].languages)+" "}</p>
             <p>map:- <a href={info[0].maps.googleMaps} target='_blank' className='underline text-blue-600'>click here to see map</a></p>
               <p>Top-level domain:-{info[0].tld}</p>
